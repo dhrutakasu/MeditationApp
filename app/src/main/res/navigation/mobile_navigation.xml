@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/NavTraining">
+
+    <fragment
+        android:id="@+id/NavHome"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.HomeFragment"
+        android:label="@string/str_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/NavDashboard"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.DashboardFragment"
+        android:label="@string/str_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/NavInformation"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.InformationFragment"
+        android:label="@string/str_infomation"
+        tools:layout="@layout/fragment_information" />
+
+    <fragment
+        android:id="@+id/NavNotification"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.SettingFragment"
+        android:label="@string/str_notifications"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>
