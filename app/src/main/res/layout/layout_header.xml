@@ -13,7 +13,8 @@
         android:src="@drawable/ic_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ClToolRight"
@@ -50,7 +51,7 @@
         android:textSize="@dimen/_14sdp"
         android:text="@string/binaural_beats"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/ClToolRight"
         app:layout_constraintStart_toEndOf="@id/IvBack" />
 </androidx.constraintlayout.widget.ConstraintLayout>

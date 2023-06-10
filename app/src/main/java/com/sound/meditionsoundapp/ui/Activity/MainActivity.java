@@ -55,18 +55,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.NavHome:
-                NcMain.navigate(R.id.NavTraining);
+                NcMain.navigate(R.id.NavHome);
                 return true;
             case R.id.NavDashboard:
-                NcMain.popBackStack(R.id.NavTraining, false);
+                NcMain.popBackStack(R.id.NavHome, false);
                 NcMain.navigate(R.id.NavDashboard);
                 return true;
-            case R.id.NavInformation:
-                NcMain.popBackStack(R.id.NavTraining, false);
-                NcMain.navigate(R.id.NavInformation);
-                return true;
+//            case R.id.NavInformation:
+//                NcMain.popBackStack(R.id.NavHome, false);
+//                NcMain.navigate(R.id.NavInformation);
+//                return true;
             case R.id.NavNotification:
-                NcMain.popBackStack(R.id.NavTraining, false);
+                NcMain.popBackStack(R.id.NavHome, false);
                 NcMain.navigate(R.id.NavNotification);
                 return true;
         }

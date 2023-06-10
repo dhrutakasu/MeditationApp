@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
 import com.sound.meditionsoundapp.R;
 
 import androidx.viewpager.widget.PagerAdapter;
@@ -26,8 +28,18 @@ public class WalkAdapter extends PagerAdapter {
         LayoutInflater inflater = activity.getLayoutInflater();
 
         View viewItem = inflater.inflate(R.layout.item_pager_list, container, false);
-        ImageView imageView = viewItem.findViewById(R.id.img_slide);
-        imageView.setImageResource(imagesArray[position]);
+        ImageView IvSlider = viewItem.findViewById(R.id.IvSlider);
+        TextView TvWalkTitle = (TextView) viewItem.findViewById(R.id.TvWalkTitle);
+        TextView TvWalkSubTitle = (TextView) viewItem.findViewById(R.id.TvWalkSubTitle);
+        if (position == 0) {
+            TvWalkTitle.setText(activity.getResources().getString(R.string.binaural_beats));
+            TvWalkSubTitle.setText(activity.getResources().getString(R.string.welcome_first));
+        } else if (position == 1) {
+            TvWalkTitle.setText(activity.getResources().getString(R.string.relaxing_sounds));
+            TvWalkSubTitle.setText(activity.getResources().getString(R.string.welcome_second));
+        }
+
+        IvSlider.setImageResource(imagesArray[position]);
         container.addView(viewItem);
 
 

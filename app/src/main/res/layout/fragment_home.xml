@@ -38,6 +38,7 @@
         android:layout_below="@id/TvBinauralBeats"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="?attr/actionBarSize"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/_18sdp"/>
 </RelativeLayout>

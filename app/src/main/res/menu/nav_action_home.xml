@@ -11,10 +11,10 @@
             android:id="@+id/NavDashboard"
             android:icon="@drawable/relexicon"
             android:title="@string/str_dashboard" />
-        <item
-            android:id="@+id/NavInformation"
-            android:icon="@drawable/info"
-            android:title="@string/str_infomation" />
+<!--        <item-->
+<!--            android:id="@+id/NavInformation"-->
+<!--            android:icon="@drawable/info"-->
+<!--            android:title="@string/str_infomation" />-->
         <item
             android:id="@+id/NavNotification"
             android:icon="@drawable/setting"

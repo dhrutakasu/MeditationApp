@@ -41,7 +41,7 @@ public class DashboardFragment extends Fragment {
 
     private void initViews() {
         context = getContext();
-        RvDashboard = (RecyclerView) DashboardView.findViewById(R.id.RvHome);
+        RvDashboard = (RecyclerView) DashboardView.findViewById(R.id.RvDashboard);
     }
 
     private void initListeners() {
@@ -84,16 +84,14 @@ public class DashboardFragment extends Fragment {
         itemModelArrayList.add(itemModel);
         itemModel = new ItemModel(getString(R.string.harmony), R.drawable.re_img10);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.harmony), R.drawable.re_img10);
-        itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.harmony), R.drawable.re_img10);
-        itemModelArrayList.add(itemModel);
         itemModel = new ItemModel(getString(R.string.hope_of_better), R.drawable.re_img19);
         itemModelArrayList.add(itemModel);
         itemModel = new ItemModel(getString(R.string.look_within), R.drawable.re_img20);
         itemModelArrayList.add(itemModel);
 
         RvDashboard.setLayoutManager(new GridLayoutManager(context,2));
-        RvDashboard.setAdapter(new ItemAdapter(context,itemModelArrayList));
+        RvDashboard.setAdapter(new ItemAdapter(context,itemModelArrayList,position -> {
+
+        }));
     }
 }

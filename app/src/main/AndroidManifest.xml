@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeditionSoundApp">
         <activity
+            android:name=".ui.Activity.SoundPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.WalkThroughActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Activity.SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

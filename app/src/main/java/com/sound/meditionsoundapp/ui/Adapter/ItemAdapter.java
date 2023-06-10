@@ -17,21 +17,29 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {
     private final Context con;
     private final ArrayList<ItemModel> models;
+    private final setItemClickListener click;
 
-    public ItemAdapter(Context context, ArrayList<ItemModel> itemModelArrayList) {
-        con=context;
-        models=itemModelArrayList;
+    public ItemAdapter(Context context, ArrayList<ItemModel> itemModelArrayList,setItemClickListener clickListener) {
+        con = context;
+        models = itemModelArrayList;
+        click = clickListener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return  new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_catregory, parent, false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_catregory, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.IvCatIcon.setImageResource(models.get(position).getMeditationIcon());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                click.ItemClick(position);
+            }
+        });
     }
 
     @Override
@@ -41,9 +49,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private ImageView IvCatIcon;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            IvCatIcon=(ImageView) itemView.findViewById(R.id.IvCatIcon);
+            IvCatIcon = (ImageView) itemView.findViewById(R.id.IvCatIcon);
         }
+    }
+
+    public interface setItemClickListener {
+        void ItemClick(int position);
     }
 }

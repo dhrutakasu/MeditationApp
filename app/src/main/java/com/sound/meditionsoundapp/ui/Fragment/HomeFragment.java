@@ -1,6 +1,7 @@
 package com.sound.meditionsoundapp.ui.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.sound.meditionsoundapp.Model.ItemModel;
 import com.sound.meditionsoundapp.R;
+import com.sound.meditionsoundapp.ui.Activity.SoundPlayerActivity;
 import com.sound.meditionsoundapp.ui.Adapter.ItemAdapter;
 
 import java.util.ArrayList;
@@ -77,8 +79,9 @@ public class HomeFragment extends Fragment {
         itemModel = new ItemModel(getString(R.string.third_eye), R.drawable.img13);
         itemModelArrayList.add(itemModel);
 
-        RvHome.setLayoutManager(new GridLayoutManager(context,2));
-        RvHome.setAdapter(new ItemAdapter(context,itemModelArrayList));
-
+        RvHome.setLayoutManager(new GridLayoutManager(context, 2));
+        RvHome.setAdapter(new ItemAdapter(context, itemModelArrayList, position -> {
+            startActivity(new Intent(context, SoundPlayerActivity.class));
+        }));
     }
 }

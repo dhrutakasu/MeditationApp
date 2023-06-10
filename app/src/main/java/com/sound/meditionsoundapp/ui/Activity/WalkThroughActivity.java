@@ -17,7 +17,7 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     private Context context;
     private ViewPager PagerWalk;
-    private TextView TvWalkTitle, TvWalkSubTitle, TvWalkContinue;
+    private TextView TvWalkContinue;
 
     private Integer[] images = {R.drawable.ic_bg_1, R.drawable.ic_bg_2};
     private TabLayout TabWalk;
@@ -37,11 +37,8 @@ public class WalkThroughActivity extends AppCompatActivity {
         context = this;
         RlWelcomeBg = (RelativeLayout) findViewById(R.id.RlWelcomeBg);
         PagerWalk = (ViewPager) findViewById(R.id.PagerWalk);
-        TvWalkTitle = (TextView) findViewById(R.id.TvWalkTitle);
-        TvWalkSubTitle = (TextView) findViewById(R.id.TvWalkSubTitle);
         TvWalkContinue = (TextView) findViewById(R.id.TvWalkContinue);
         TabWalk = (TabLayout) findViewById(R.id.TabWalk);
-
     }
 
     private void initListeners() {
@@ -59,9 +56,7 @@ public class WalkThroughActivity extends AppCompatActivity {
     private void initActions() {
         WalkAdapter adapter = new WalkAdapter(this, images);
         PagerWalk.setAdapter(adapter);
-        RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_1);
-        TvWalkTitle.setText(getResources().getString(R.string.binaural_beats));
-        TvWalkSubTitle.setText(getResources().getString(R.string.welcome_first));
+        RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
         TabWalk.setupWithViewPager(PagerWalk, true);
 
         PagerWalk.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -84,13 +79,9 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     private void changeText(int i) {
         if (i == 0) {
-            TvWalkTitle.setText(getResources().getString(R.string.binaural_beats));
-            TvWalkSubTitle.setText(getResources().getString(R.string.welcome_first));
-            RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_1);
+            RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
             TvWalkContinue.setText("NEXT");
         } else if (i == 1) {
-            TvWalkTitle.setText(getResources().getString(R.string.relaxing_sounds));
-            TvWalkSubTitle.setText(getResources().getString(R.string.welcome_second));
             RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
             TvWalkContinue.setText("GOT IT");
         }
