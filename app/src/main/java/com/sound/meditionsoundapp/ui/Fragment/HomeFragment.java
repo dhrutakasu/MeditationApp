@@ -16,6 +16,7 @@ import com.sound.meditionsoundapp.Model.ItemModel;
 import com.sound.meditionsoundapp.R;
 import com.sound.meditionsoundapp.ui.Activity.SoundPlayerActivity;
 import com.sound.meditionsoundapp.ui.Adapter.ItemAdapter;
+import com.sound.meditionsoundapp.utils.Constants;
 
 import java.util.ArrayList;
 
@@ -81,7 +82,9 @@ public class HomeFragment extends Fragment {
 
         RvHome.setLayoutManager(new GridLayoutManager(context, 2));
         RvHome.setAdapter(new ItemAdapter(context, itemModelArrayList, position -> {
-            startActivity(new Intent(context, SoundPlayerActivity.class));
+            startActivity(new Intent(context, SoundPlayerActivity.class)
+                    .putExtra(Constants.ItemName,itemModelArrayList.get(position).getMeditationName())
+                    .putExtra(Constants.ItemIcon,itemModelArrayList.get(position).getMeditationIcon()));
         }));
     }
 }

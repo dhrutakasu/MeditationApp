@@ -32,13 +32,12 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/_120sdp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/img1" />
+            android:layout_alignParentEnd="true"/>
 
         <ImageView
             android:id="@+id/IvPlaySound"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_below="@+id/IvItemImg"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
@@ -46,8 +45,16 @@
             android:src="@drawable/play" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvSound"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/IvPlaySound"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_alignParentBottom="true"
+            tools:listitem="@layout/item_sound"/>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
