@@ -92,4 +92,9 @@
     <string name="guitar">Guitar</string>
     <string name="piano">Piano</string>
     <string name="flute">Flute</string>
+    <string name="setting">Setting</string>
+    <string name="exercise_time">Exercise Timer</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="policy">Private Policy</string>
 </resources>

@@ -4,16 +4,16 @@
     android:id="@+id/ConstSound"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
     android:background="@drawable/ic_border_color"
     android:backgroundTint="@color/white"
-    android:padding="@dimen/_1sdp"
-    android:layout_margin="@dimen/_6sdp">
+    android:padding="@dimen/_1sdp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_8ssp"
         app:cardBackgroundColor="@color/lightBlue"
+        app:cardCornerRadius="@dimen/_8ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,30 +21,53 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_5sdp">
-
-            <TextView
-                android:id="@+id/TvSoundName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="@dimen/_14sdp"
-                android:text="@string/binaural_beats"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"/>
+            android:padding="@dimen/_5sdp"
+            android:background="@color/lightBlue">
 
             <ImageView
                 android:id="@+id/IvSoundIcon"
                 android:layout_width="@dimen/_35sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_rain"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@id/IvSoundIcon"
+                android:src="@drawable/ic_rain"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvSoundIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/TvSoundName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/binaural_beats"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/ic_border_color"
+            android:padding="@dimen/_5sdp">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="10"
+                android:maxHeight="6dp"
+                android:minHeight="6dp"
+                android:progress="8"
+                android:progressDrawable="@drawable/seekbar_define_color_style"
+                android:thumb="@drawable/seekbar_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

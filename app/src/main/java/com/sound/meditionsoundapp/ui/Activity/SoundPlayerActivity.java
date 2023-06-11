@@ -165,7 +165,7 @@ public class SoundPlayerActivity extends AppCompatActivity implements View.OnCli
         modelArrayList.add(new ItemModel(getString(R.string.wiper), R.drawable.ic_wiper, 0));
         modelArrayList.add(new ItemModel(getString(R.string.cars_passing), R.drawable.ic_passing_car, 0));
         modelArrayList.add(new ItemModel(getString(R.string.wind_chime), R.drawable.ic_wind_chime, 0));
-        modelArrayList.add(new ItemModel(getString(R.string.meditation_bell), R.drawable.ic_rain, 0));
+        modelArrayList.add(new ItemModel(getString(R.string.meditation_bell), R.drawable.ic_meditation_bell, 0));
         modelArrayList.add(new ItemModel(getString(R.string.violin), R.drawable.ic_violin, 0));
         modelArrayList.add(new ItemModel(getString(R.string.harp), R.drawable.ic_harp, 0));
         modelArrayList.add(new ItemModel(getString(R.string.guzheng), R.drawable.ic_guzheng, 0));
@@ -178,53 +178,101 @@ public class SoundPlayerActivity extends AppCompatActivity implements View.OnCli
         System.out.println("********** size : " + modelArrayList.size());
 
         PlayerLightRain = MediaPlayer.create(context, R.raw.nature_rain);
+        PlayerLightRain.setLooping(true);
         PlayerHeavyRain = MediaPlayer.create(context, R.raw.nature_heavy_rain);
+        PlayerHeavyRain.setLooping(true);
         PlayerThunder = MediaPlayer.create(context, R.raw.nature_thunder);
+        PlayerThunder.setLooping(true);
         PlayerRainOnUmbrella = MediaPlayer.create(context, R.raw.rain_on_umbrella);
+        PlayerRainOnUmbrella.setLooping(true);
         PlayerRainOnWindow = MediaPlayer.create(context, R.raw.rain_on_window);
+        PlayerRainOnWindow.setLooping(true);
         PlayerSnow = MediaPlayer.create(context, R.raw.snow);
+        PlayerSnow.setLooping(true);
         PlayerRainOnRoof = MediaPlayer.create(context, R.raw.rain_on_roof);
+        PlayerRainOnRoof.setLooping(true);
         PlayerRainOnTent = MediaPlayer.create(context, R.raw.rain_on_tent);
+        PlayerRainOnRoof.setLooping(true);
         PlayerRainOnPuddle = MediaPlayer.create(context, R.raw.rain_on_puddle);
+        PlayerRainOnPuddle.setLooping(true);
         PlayerWindLeaves = MediaPlayer.create(context, R.raw.wind_leaves);
+        PlayerWindLeaves.setLooping(true);
         PlayerWind = MediaPlayer.create(context, R.raw.nature_wind);
+        PlayerWind.setLooping(true);
         PlayerDripping = MediaPlayer.create(context, R.raw.nature_dripping);
+        PlayerDripping.setLooping(true);
         PlayerBird = MediaPlayer.create(context, R.raw.bird);
+        PlayerBird.setLooping(true);
         PlayerBirds = MediaPlayer.create(context, R.raw.bird2);
+        PlayerBirds.setLooping(true);
         PlayerSeagull = MediaPlayer.create(context, R.raw.seagull);
+        PlayerSeagull.setLooping(true);
         PlayerFrog = MediaPlayer.create(context, R.raw.animal_frog);
+        PlayerFrog.setLooping(true);
         PlayerFroggs = MediaPlayer.create(context, R.raw.bird3);
+        PlayerFroggs.setLooping(true);
         PlayerCricket = MediaPlayer.create(context, R.raw.animal_cricket);
+        PlayerCricket.setLooping(true);
         PlayerCicada = MediaPlayer.create(context, R.raw.cicada);
+        PlayerCicada.setLooping(true);
         PlayerWolf = MediaPlayer.create(context, R.raw.wolf);
+        PlayerWolf.setLooping(true);
         PlayerLoon = MediaPlayer.create(context, R.raw.loon);
+        PlayerLoon.setLooping(true);
         PlayerCatPurring = MediaPlayer.create(context, R.raw.cat_purring);
+        PlayerCatPurring.setLooping(true);
         PlayerWhale = MediaPlayer.create(context, R.raw.whale);
+        PlayerWhale.setLooping(true);
         PlayerOwl = MediaPlayer.create(context, R.raw.animal_owl);
+        PlayerOwl.setLooping(true);
         PlayerCar = MediaPlayer.create(context, R.raw.instrument_car);
+        PlayerCar.setLooping(true);
         PlayerCrowd = MediaPlayer.create(context, R.raw.crowd);
+        PlayerCrowd.setLooping(true);
         PlayerHeartbeat = MediaPlayer.create(context, R.raw.heartbeat);
+        PlayerHeartbeat.setLooping(true);
         PlayerConstructionSite = MediaPlayer.create(context, R.raw.construction_site);
+        PlayerConstructionSite.setLooping(true);
         PlayerSleepTight = MediaPlayer.create(context, R.raw.sleep_tight);
+        PlayerSleepTight.setLooping(true);
         PlayerDryer = MediaPlayer.create(context, R.raw.dryer);
+        PlayerDryer.setLooping(true);
         PlayerHairDryer = MediaPlayer.create(context, R.raw.hair_dryer);
+        PlayerHairDryer.setLooping(true);
         PlayerVacuumCleaner = MediaPlayer.create(context, R.raw.vacuum_cleaner);
+        PlayerVacuumCleaner.setLooping(true);
         PlayerFan = MediaPlayer.create(context, R.raw.instrument_fan);
+        PlayerFan.setLooping(true);
         PlayerClock = MediaPlayer.create(context, R.raw.instrument_clock);
+        PlayerClock.setLooping(true);
         PlayerKeyboard = MediaPlayer.create(context, R.raw.instrument_keyborad);
+        PlayerKeyboard.setLooping(true);
         PlayerWiper = MediaPlayer.create(context, R.raw.wiper);
+        PlayerWiper.setLooping(true);
         PlayerCarsPassing = MediaPlayer.create(context, R.raw.cars_passing);
+        PlayerCarsPassing.setLooping(true);
         PlayerWindChime = MediaPlayer.create(context, R.raw.wind_chime);
+        PlayerWindChime.setLooping(true);
         PlayerMeditationBell = MediaPlayer.create(context, R.raw.meditation_bell);
+        PlayerMeditationBell.setLooping(true);
         PlayerViolin = MediaPlayer.create(context, R.raw.violin);
+        PlayerViolin.setLooping(true);
         PlayerHarp = MediaPlayer.create(context, R.raw.harp);
+        PlayerHarp.setLooping(true);
         PlayerGuzheng = MediaPlayer.create(context, R.raw.guzheng);
+        PlayerGuzheng.setLooping(true);
         PlayerWhiteNoise = MediaPlayer.create(context, R.raw.white_noise);
+        PlayerWhiteNoise.setLooping(true);
         PlayerBrownNoise = MediaPlayer.create(context, R.raw.brown_noise);
+        PlayerBrownNoise.setLooping(true);
         PlayerPinkNoise = MediaPlayer.create(context, R.raw.pink_noise);
+        PlayerPinkNoise.setLooping(true);
         PlayerGuitar = MediaPlayer.create(context, R.raw.harmony);
+        PlayerGuitar.setLooping(true);
         PlayerPiano = MediaPlayer.create(context, R.raw.hopeforbetter);
+        PlayerPiano.setLooping(true);
         PlayerFlute = MediaPlayer.create(context, R.raw.lookwithin);
+        PlayerFlute.setLooping(true);
 
 
         soundAdapter = new SoundsAdapter(context, modelArrayList, position -> {
@@ -232,436 +280,678 @@ public class SoundPlayerActivity extends AppCompatActivity implements View.OnCli
             System.out.println("--?***** : " + SoundName);
             if (SoundName.equalsIgnoreCase(getString(R.string.ligth_rain))) {
                 System.out.println("--?*****??? : " + PlayerLightRain.isPlaying());
-                if (!PlayerLightRain.isPlaying()) {
-                    PlayerLightRain.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerLightRain.stop();
-                    PlayerLightRain = MediaPlayer.create(context, R.raw.nature_rain);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerLightRain.isPlaying()) {
+                        PlayerLightRain.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerLightRain.stop();
+                        PlayerLightRain = MediaPlayer.create(context, R.raw.nature_rain);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.heavy_rain))) {
-                if (!PlayerHeavyRain.isPlaying()) {
-                    PlayerHeavyRain.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerHeavyRain.stop();
-                    PlayerHeavyRain = MediaPlayer.create(context, R.raw.nature_heavy_rain);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerHeavyRain.isPlaying()) {
+                        PlayerHeavyRain.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerHeavyRain.stop();
+                        PlayerHeavyRain = MediaPlayer.create(context, R.raw.nature_heavy_rain);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.thunder))) {
-                if (!PlayerThunder.isPlaying()) {
-                    PlayerThunder.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerThunder.stop();
-                    PlayerThunder = MediaPlayer.create(context, R.raw.nature_thunder);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerThunder.isPlaying()) {
+                        PlayerThunder.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerThunder.stop();
+                        PlayerThunder = MediaPlayer.create(context, R.raw.nature_thunder);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.rain_on_umbrella))) {
-                if (!PlayerRainOnUmbrella.isPlaying()) {
-                    PlayerRainOnUmbrella.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerRainOnUmbrella.stop();
-                    PlayerRainOnUmbrella = MediaPlayer.create(context, R.raw.rain_on_umbrella);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerRainOnUmbrella.isPlaying()) {
+                        PlayerRainOnUmbrella.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerRainOnUmbrella.stop();
+                        PlayerRainOnUmbrella = MediaPlayer.create(context, R.raw.rain_on_umbrella);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.rain_on_window))) {
-                if (!PlayerRainOnWindow.isPlaying()) {
-                    PlayerRainOnWindow.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerRainOnWindow.stop();
-                    PlayerRainOnWindow = MediaPlayer.create(context, R.raw.rain_on_window);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerRainOnWindow.isPlaying()) {
+                        PlayerRainOnWindow.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerRainOnWindow.stop();
+                        PlayerRainOnWindow = MediaPlayer.create(context, R.raw.rain_on_window);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.snow))) {
-                if (!PlayerSnow.isPlaying()) {
-                    PlayerSnow.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerSnow.stop();
-                    PlayerSnow = MediaPlayer.create(context, R.raw.snow);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerSnow.isPlaying()) {
+                        PlayerSnow.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerSnow.stop();
+                        PlayerSnow = MediaPlayer.create(context, R.raw.snow);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.rain_on_roof))) {
-                if (!PlayerRainOnRoof.isPlaying()) {
-                    PlayerRainOnRoof.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerRainOnRoof.stop();
-                    PlayerRainOnRoof = MediaPlayer.create(context, R.raw.rain_on_roof);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerRainOnRoof.isPlaying()) {
+                        PlayerRainOnRoof.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerRainOnRoof.stop();
+                        PlayerRainOnRoof = MediaPlayer.create(context, R.raw.rain_on_roof);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.rain_on_tent))) {
-                if (!PlayerRainOnTent.isPlaying()) {
-                    PlayerRainOnTent.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerRainOnTent.stop();
-                    PlayerRainOnTent = MediaPlayer.create(context, R.raw.rain_on_tent);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerRainOnTent.isPlaying()) {
+                        PlayerRainOnTent.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerRainOnTent.stop();
+                        PlayerRainOnTent = MediaPlayer.create(context, R.raw.rain_on_tent);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.rain_on_puddle))) {
-                if (!PlayerRainOnPuddle.isPlaying()) {
-                    PlayerRainOnPuddle.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerRainOnPuddle.stop();
-                    PlayerRainOnPuddle = MediaPlayer.create(context, R.raw.rain_on_puddle);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerRainOnPuddle.isPlaying()) {
+                        PlayerRainOnPuddle.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerRainOnPuddle.stop();
+                        PlayerRainOnPuddle = MediaPlayer.create(context, R.raw.rain_on_puddle);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.wind_leaves))) {
-                if (!PlayerWindLeaves.isPlaying()) {
-                    PlayerWindLeaves.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWindLeaves.stop();
-                    PlayerWindLeaves = MediaPlayer.create(context, R.raw.wind_leaves);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWindLeaves.isPlaying()) {
+                        PlayerWindLeaves.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWindLeaves.stop();
+                        PlayerWindLeaves = MediaPlayer.create(context, R.raw.wind_leaves);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.wind))) {
-                if (!PlayerWind.isPlaying()) {
-                    PlayerWind.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWind = MediaPlayer.create(context, R.raw.nature_wind);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWind.isPlaying()) {
+                        PlayerWind.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWind = MediaPlayer.create(context, R.raw.nature_wind);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.drip))) {
-                if (!PlayerDripping.isPlaying()) {
-                    PlayerDripping.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerDripping.stop();
-                    PlayerDripping = MediaPlayer.create(context, R.raw.nature_dripping);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerDripping.isPlaying()) {
+                        PlayerDripping.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerDripping.stop();
+                        PlayerDripping = MediaPlayer.create(context, R.raw.nature_dripping);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.bird))) {
-                if (!PlayerBird.isPlaying()) {
-                    PlayerBird.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerBird.stop();
-                    PlayerBird = MediaPlayer.create(context, R.raw.bird);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerBird.isPlaying()) {
+                        PlayerBird.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerBird.stop();
+                        PlayerBird = MediaPlayer.create(context, R.raw.bird);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.birds))) {
-                if (!PlayerBirds.isPlaying()) {
-                    PlayerBirds.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerBirds.stop();
-                    PlayerBirds = MediaPlayer.create(context, R.raw.bird2);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerBirds.isPlaying()) {
+                        PlayerBirds.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerBirds.stop();
+                        PlayerBirds = MediaPlayer.create(context, R.raw.bird2);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.seagull))) {
-                if (!PlayerSeagull.isPlaying()) {
-                    PlayerSeagull.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerSeagull.stop();
-                    PlayerSeagull = MediaPlayer.create(context, R.raw.seagull);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerSeagull.isPlaying()) {
+                        PlayerSeagull.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerSeagull.stop();
+                        PlayerSeagull = MediaPlayer.create(context, R.raw.seagull);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.frog))) {
-                if (!PlayerFrog.isPlaying()) {
-                    PlayerFrog.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerFrog.stop();
-                    PlayerFrog = MediaPlayer.create(context, R.raw.animal_frog);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerFrog.isPlaying()) {
+                        PlayerFrog.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerFrog.stop();
+                        PlayerFrog = MediaPlayer.create(context, R.raw.animal_frog);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.froggs))) {
-                if (!PlayerFroggs.isPlaying()) {
-                    PlayerFroggs.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerFroggs.stop();
-                    PlayerFroggs = MediaPlayer.create(context, R.raw.bird3);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerFroggs.isPlaying()) {
+                        PlayerFroggs.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerFroggs.stop();
+                        PlayerFroggs = MediaPlayer.create(context, R.raw.bird3);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.cricket))) {
-                if (!PlayerCricket.isPlaying()) {
-                    PlayerCricket.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCricket.stop();
-                    PlayerCricket = MediaPlayer.create(context, R.raw.animal_cricket);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCricket.isPlaying()) {
+                        PlayerCricket.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCricket.stop();
+                        PlayerCricket = MediaPlayer.create(context, R.raw.animal_cricket);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.cicada))) {
-                if (!PlayerCicada.isPlaying()) {
-                    PlayerCicada.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCicada.stop();
-                    PlayerCicada = MediaPlayer.create(context, R.raw.cicada);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCicada.isPlaying()) {
+                        PlayerCicada.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCicada.stop();
+                        PlayerCicada = MediaPlayer.create(context, R.raw.cicada);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.wolf))) {
-                if (!PlayerWolf.isPlaying()) {
-                    PlayerWolf.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWolf.stop();
-                    PlayerWolf = MediaPlayer.create(context, R.raw.wolf);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWolf.isPlaying()) {
+                        PlayerWolf.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWolf.stop();
+                        PlayerWolf = MediaPlayer.create(context, R.raw.wolf);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.loon))) {
-                if (!PlayerLoon.isPlaying()) {
-                    PlayerLoon.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerLoon.stop();
-                    PlayerLoon = MediaPlayer.create(context, R.raw.loon);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerLoon.isPlaying()) {
+                        PlayerLoon.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerLoon.stop();
+                        PlayerLoon = MediaPlayer.create(context, R.raw.loon);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.cat_purruing))) {
-                if (!PlayerCatPurring.isPlaying()) {
-                    PlayerCatPurring.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCatPurring.stop();
-                    PlayerCatPurring = MediaPlayer.create(context, R.raw.cat_purring);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCatPurring.isPlaying()) {
+                        PlayerCatPurring.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCatPurring.stop();
+                        PlayerCatPurring = MediaPlayer.create(context, R.raw.cat_purring);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.whale))) {
-                if (!PlayerWhale.isPlaying()) {
-                    PlayerWhale.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWhale.stop();
-                    PlayerWhale = MediaPlayer.create(context, R.raw.whale);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWhale.isPlaying()) {
+                        PlayerWhale.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWhale.stop();
+                        PlayerWhale = MediaPlayer.create(context, R.raw.whale);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.owl))) {
-                if (!PlayerOwl.isPlaying()) {
-                    PlayerOwl.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerOwl.stop();
-                    PlayerOwl = MediaPlayer.create(context, R.raw.animal_owl);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerOwl.isPlaying()) {
+                        PlayerOwl.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerOwl.stop();
+                        PlayerOwl = MediaPlayer.create(context, R.raw.animal_owl);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.car))) {
-                if (!PlayerCar.isPlaying()) {
-                    PlayerCar.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCar.stop();
-                    PlayerCar = MediaPlayer.create(context, R.raw.instrument_car);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCar.isPlaying()) {
+                        PlayerCar.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCar.stop();
+                        PlayerCar = MediaPlayer.create(context, R.raw.instrument_car);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.crowd))) {
-                if (!PlayerCrowd.isPlaying()) {
-                    PlayerCrowd.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCrowd.stop();
-                    PlayerCrowd = MediaPlayer.create(context, R.raw.crowd);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCrowd.isPlaying()) {
+                        PlayerCrowd.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCrowd.stop();
+                        PlayerCrowd = MediaPlayer.create(context, R.raw.crowd);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.heartbeat))) {
-                if (!PlayerHeartbeat.isPlaying()) {
-                    PlayerHeartbeat.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerHeartbeat.stop();
-                    PlayerHeartbeat = MediaPlayer.create(context, R.raw.heartbeat);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerHeartbeat.isPlaying()) {
+                        PlayerHeartbeat.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerHeartbeat.stop();
+                        PlayerHeartbeat = MediaPlayer.create(context, R.raw.heartbeat);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.construction_site))) {
-                if (!PlayerConstructionSite.isPlaying()) {
-                    PlayerConstructionSite.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerConstructionSite.stop();
-                    PlayerConstructionSite = MediaPlayer.create(context, R.raw.construction_site);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerConstructionSite.isPlaying()) {
+                        PlayerConstructionSite.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerConstructionSite.stop();
+                        PlayerConstructionSite = MediaPlayer.create(context, R.raw.construction_site);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.lullaby))) {
-                if (!PlayerSleepTight.isPlaying()) {
-                    PlayerSleepTight.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerSleepTight.stop();
-                    PlayerSleepTight = MediaPlayer.create(context, R.raw.sleep_tight);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerSleepTight.isPlaying()) {
+                        PlayerSleepTight.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerSleepTight.stop();
+                        PlayerSleepTight = MediaPlayer.create(context, R.raw.sleep_tight);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.dryer))) {
-                if (!PlayerDryer.isPlaying()) {
-                    PlayerDryer.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerDryer.stop();
-                    PlayerDryer = MediaPlayer.create(context, R.raw.dryer);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerDryer.isPlaying()) {
+                        PlayerDryer.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerDryer.stop();
+                        PlayerDryer = MediaPlayer.create(context, R.raw.dryer);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.hair_dryer))) {
-                if (!PlayerHairDryer.isPlaying()) {
-                    PlayerHairDryer.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerHairDryer.stop();
-                    PlayerHairDryer = MediaPlayer.create(context, R.raw.hair_dryer);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerHairDryer.isPlaying()) {
+                        PlayerHairDryer.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerHairDryer.stop();
+                        PlayerHairDryer = MediaPlayer.create(context, R.raw.hair_dryer);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.vacuum_cleaner))) {
-                if (!PlayerVacuumCleaner.isPlaying()) {
-                    PlayerVacuumCleaner.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerVacuumCleaner.stop();
-                    PlayerVacuumCleaner = MediaPlayer.create(context, R.raw.vacuum_cleaner);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerVacuumCleaner.isPlaying()) {
+                        PlayerVacuumCleaner.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerVacuumCleaner.stop();
+                        PlayerVacuumCleaner = MediaPlayer.create(context, R.raw.vacuum_cleaner);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.fan))) {
-                if (!PlayerFan.isPlaying()) {
-                    PlayerFan.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerFan.stop();
-                    PlayerFan = MediaPlayer.create(context, R.raw.instrument_fan);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerFan.isPlaying()) {
+                        PlayerFan.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerFan.stop();
+                        PlayerFan = MediaPlayer.create(context, R.raw.instrument_fan);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.clock))) {
-                if (!PlayerClock.isPlaying()) {
-                    PlayerClock.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerClock.stop();
-                    PlayerClock = MediaPlayer.create(context, R.raw.instrument_clock);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerClock.isPlaying()) {
+                        PlayerClock.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerClock.stop();
+                        PlayerClock = MediaPlayer.create(context, R.raw.instrument_clock);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.keyboard))) {
-                if (!PlayerKeyboard.isPlaying()) {
-                    PlayerKeyboard.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerKeyboard.stop();
-                    PlayerKeyboard = MediaPlayer.create(context, R.raw.instrument_keyborad);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerKeyboard.isPlaying()) {
+                        PlayerKeyboard.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerKeyboard.stop();
+                        PlayerKeyboard = MediaPlayer.create(context, R.raw.instrument_keyborad);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.wiper))) {
-                if (!PlayerWiper.isPlaying()) {
-                    PlayerWiper.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWiper.stop();
-                    PlayerWiper = MediaPlayer.create(context, R.raw.wiper);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWiper.isPlaying()) {
+                        PlayerWiper.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWiper.stop();
+                        PlayerWiper = MediaPlayer.create(context, R.raw.wiper);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.cars_passing))) {
-                if (!PlayerCarsPassing.isPlaying()) {
-                    PlayerCarsPassing.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerCarsPassing.stop();
-                    PlayerCarsPassing = MediaPlayer.create(context, R.raw.cars_passing);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerCarsPassing.isPlaying()) {
+                        PlayerCarsPassing.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerCarsPassing.stop();
+                        PlayerCarsPassing = MediaPlayer.create(context, R.raw.cars_passing);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.wind_chime))) {
-                if (!PlayerWindChime.isPlaying()) {
-                    PlayerWindChime.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWindChime.stop();
-                    PlayerWindChime = MediaPlayer.create(context, R.raw.wind_chime);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                System.out.println("******* : " + PlayerWindChime.isPlaying());
+                try {
+                    if (!PlayerWindChime.isPlaying()) {
+                        PlayerWindChime.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWindChime.stop();
+                        PlayerWindChime = MediaPlayer.create(context, R.raw.wind_chime);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.meditation_bell))) {
-                if (!PlayerMeditationBell.isPlaying()) {
-                    PlayerMeditationBell.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerMeditationBell.stop();
-                    PlayerMeditationBell = MediaPlayer.create(context, R.raw.meditation_bell);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                System.out.println("******* : " + PlayerMeditationBell.isPlaying());
+                try {
+                    if (!PlayerMeditationBell.isPlaying()) {
+                        PlayerMeditationBell.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerMeditationBell.stop();
+                        PlayerMeditationBell = MediaPlayer.create(context, R.raw.meditation_bell);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.violin))) {
-                if (!PlayerViolin.isPlaying()) {
-                    PlayerViolin.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerViolin.stop();
-                    PlayerViolin = MediaPlayer.create(context, R.raw.violin);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerViolin.isPlaying()) {
+                        PlayerViolin.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerViolin.stop();
+                        PlayerViolin = MediaPlayer.create(context, R.raw.violin);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.harp))) {
-                if (!PlayerHarp.isPlaying()) {
-                    PlayerHarp.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerHarp.stop();
-                    PlayerHarp = MediaPlayer.create(context, R.raw.harp);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerHarp.isPlaying()) {
+                        PlayerHarp.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerHarp.stop();
+                        PlayerHarp = MediaPlayer.create(context, R.raw.harp);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.guzheng))) {
-                if (!PlayerGuzheng.isPlaying()) {
-                    PlayerGuzheng.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerGuzheng.stop();
-                    PlayerGuzheng = MediaPlayer.create(context, R.raw.guzheng);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerGuzheng.isPlaying()) {
+                        PlayerGuzheng.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerGuzheng.stop();
+                        PlayerGuzheng = MediaPlayer.create(context, R.raw.guzheng);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.white_noise))) {
-                if (!PlayerWhiteNoise.isPlaying()) {
-                    PlayerWhiteNoise.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerWhiteNoise.stop();
-                    PlayerWhiteNoise = MediaPlayer.create(context, R.raw.white_noise);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerWhiteNoise.isPlaying()) {
+                        PlayerWhiteNoise.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerWhiteNoise.stop();
+                        PlayerWhiteNoise = MediaPlayer.create(context, R.raw.white_noise);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.brown_noise))) {
-                if (!PlayerBrownNoise.isPlaying()) {
-                    PlayerBrownNoise.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerBrownNoise.stop();
-                    PlayerBrownNoise = MediaPlayer.create(context, R.raw.brown_noise);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerBrownNoise.isPlaying()) {
+                        PlayerBrownNoise.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerBrownNoise.stop();
+                        PlayerBrownNoise = MediaPlayer.create(context, R.raw.brown_noise);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.pink_noise))) {
-                if (!PlayerPinkNoise.isPlaying()) {
-                    PlayerPinkNoise.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerPinkNoise.stop();
-                    PlayerPinkNoise = MediaPlayer.create(context, R.raw.pink_noise);
+                try {
+                    if (!PlayerPinkNoise.isPlaying()) {
+                        PlayerPinkNoise.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerPinkNoise.stop();
+                        PlayerPinkNoise = MediaPlayer.create(context, R.raw.pink_noise);
 
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.guitar))) {
-                if (!PlayerGuitar.isPlaying()) {
-                    PlayerGuitar.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerGuitar.stop();
-                    PlayerGuitar = MediaPlayer.create(context, R.raw.harmony);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerGuitar.isPlaying()) {
+                        PlayerGuitar.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerGuitar.stop();
+                        PlayerGuitar = MediaPlayer.create(context, R.raw.harmony);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.piano))) {
-                if (!PlayerPiano.isPlaying()) {
-                    PlayerPiano.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerPiano.stop();
-                    PlayerPiano = MediaPlayer.create(context, R.raw.hopeforbetter);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerPiano.isPlaying()) {
+                        PlayerPiano.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerPiano.stop();
+                        PlayerPiano = MediaPlayer.create(context, R.raw.hopeforbetter);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             } else if (SoundName.equalsIgnoreCase(getString(R.string.flute))) {
-                if (!PlayerFlute.isPlaying()) {
-                    PlayerFlute.start();
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
-                } else {
-                    PlayerFlute.stop();
-                    PlayerFlute = MediaPlayer.create(context, R.raw.lookwithin);
-                    modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                try {
+                    if (!PlayerFlute.isPlaying()) {
+                        PlayerFlute.start();
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 1));
+                    } else {
+                        PlayerFlute.stop();
+                        PlayerFlute = MediaPlayer.create(context, R.raw.lookwithin);
+                        modelArrayList.set(position, new ItemModel(modelArrayList.get(position).getMeditationName(), modelArrayList.get(position).getMeditationIcon(), 0));
+                    }
+                } catch (Exception e) {
+                    System.out.println("--&&******&& :: " + e.getMessage());
+                    e.printStackTrace();
                 }
             }
             soundAdapter.notifyItemChanged(position);
@@ -690,5 +980,142 @@ public class SoundPlayerActivity extends AppCompatActivity implements View.OnCli
             PlayerSound = MediaPlayer.create(context, ItemId);
             IvPlaySound.setImageResource(R.drawable.play);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (PlayerSound.isPlaying()) {
+            PlayerSound.stop();
+        }
+        if (PlayerLightRain.isPlaying()) {
+            PlayerLightRain.stop();
+        }
+        if (PlayerHeavyRain.isPlaying()) {
+            PlayerHeavyRain.stop();
+        }
+        if (PlayerThunder.isPlaying()) {
+            PlayerThunder.stop();
+        }
+        if (PlayerRainOnWindow.isPlaying()) {
+            PlayerRainOnWindow.stop();
+        }
+        if (PlayerSnow.isPlaying()) {
+            PlayerSnow.stop();
+        }
+        if (PlayerRainOnTent.isPlaying()) {
+            PlayerRainOnTent.stop();
+        }
+        if (PlayerRainOnRoof.isPlaying()) {
+            PlayerRainOnRoof.stop();
+        }
+        if (PlayerRainOnPuddle.isPlaying()) {
+            PlayerRainOnPuddle.stop();
+        }
+        if (PlayerWindLeaves.isPlaying()) {
+            PlayerWindLeaves.stop();
+        }
+        if (PlayerDripping.isPlaying()) {
+            PlayerDripping.stop();
+        }
+        if (PlayerBird.isPlaying()) {
+            PlayerBird.stop();
+        }
+        if (PlayerFrog.isPlaying()) {
+            PlayerFrog.stop();
+        }
+        if (PlayerCricket.isPlaying()) {
+            PlayerCricket.stop();
+        }
+        if (PlayerCicada.isPlaying()) {
+            PlayerCicada.stop();
+        }
+        if (PlayerWolf.isPlaying()) {
+            PlayerWolf.stop();
+        }
+        if (PlayerLoon.isPlaying()) {
+            PlayerLoon.stop();
+        }
+        if (PlayerCatPurring.isPlaying()) {
+            PlayerCatPurring.stop();
+        }
+        if (PlayerWhale.isPlaying()) {
+            PlayerWhale.stop();
+        }
+        if (PlayerOwl.isPlaying()) {
+            PlayerOwl.stop();
+        }
+        if (PlayerCar.isPlaying()) {
+            PlayerCar.stop();
+        }
+        if (PlayerCrowd.isPlaying()) {
+            PlayerCrowd.stop();
+        }
+        if (PlayerHeartbeat.isPlaying()) {
+            PlayerHeartbeat.stop();
+        }
+        if (PlayerConstructionSite.isPlaying()) {
+            PlayerConstructionSite.stop();
+        }
+        if (PlayerSleepTight.isPlaying()) {
+            PlayerSleepTight.stop();
+        }
+        if (PlayerDryer.isPlaying()) {
+            PlayerDryer.stop();
+        }
+        if (PlayerHairDryer.isPlaying()) {
+            PlayerHairDryer.stop();
+        }
+        if (PlayerVacuumCleaner.isPlaying()) {
+            PlayerVacuumCleaner.stop();
+        }
+        if (PlayerFan.isPlaying()) {
+            PlayerFan.stop();
+        }
+        if (PlayerClock.isPlaying()) {
+            PlayerClock.stop();
+        }
+        if (PlayerKeyboard.isPlaying()) {
+            PlayerKeyboard.stop();
+        }
+        if (PlayerWiper.isPlaying()) {
+            PlayerWiper.stop();
+        }
+        if (PlayerCarsPassing.isPlaying()) {
+            PlayerCarsPassing.stop();
+        }
+        if (PlayerWindChime.isPlaying()) {
+            PlayerWindChime.stop();
+        }
+        if (PlayerMeditationBell.isPlaying()) {
+            PlayerMeditationBell.stop();
+        }
+        if (PlayerViolin.isPlaying()) {
+            PlayerViolin.stop();
+        }
+        if (PlayerHarp.isPlaying()) {
+            PlayerHarp.stop();
+        }
+        if (PlayerGuzheng.isPlaying()) {
+            PlayerGuzheng.stop();
+        }
+        if (PlayerWhiteNoise.isPlaying()) {
+            PlayerWhiteNoise.stop();
+        }
+        if (PlayerBrownNoise.isPlaying()) {
+            PlayerBrownNoise.stop();
+        }
+        if (PlayerPinkNoise.isPlaying()) {
+            PlayerPinkNoise.stop();
+        }
+        if (PlayerGuitar.isPlaying()) {
+            PlayerGuitar.stop();
+        }
+        if (PlayerPiano.isPlaying()) {
+            PlayerPiano.stop();
+        }
+        if (PlayerFlute.isPlaying()) {
+            PlayerFlute.stop();
+        }
+        super.onBackPressed();
     }
 }

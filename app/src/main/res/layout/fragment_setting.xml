@@ -1,8 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBg"
     tools:context=".ui.Fragment.SettingFragment">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/TvWelcomeTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:textColor="#fff"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TvSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvWelcomeTo"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:text="@string/setting"
+        android:textColor="#3665fe"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/ViewSetting"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_500"
+        android:layout_below="@id/TvSetting"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ViewSetting"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/TvExerciseTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/exercise_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/ViewExerciseTime"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/TvExerciseTime"
+            android:layout_marginTop="5dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/TvShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ViewExerciseTime"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/ViewShare"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/TvShare"
+            android:layout_marginTop="5dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/TvRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rate"
+            android:padding="@dimen/_10sdp"
+            android:layout_below="@id/ViewShare"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/ViewRate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/TvRate"
+            android:layout_marginTop="5dp"
+            android:background="@color/purple_500" />
+
+        <TextView
+            android:id="@+id/TvPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/policy"
+            android:padding="@dimen/_10sdp"
+            android:layout_below="@id/ViewRate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/ViewPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/TvPolicy"
+            android:layout_marginTop="5dp"
+            android:background="@color/purple_500" />
+
+    </RelativeLayout>
+</RelativeLayout>
