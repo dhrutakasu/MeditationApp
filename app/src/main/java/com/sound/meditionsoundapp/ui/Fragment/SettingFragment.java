@@ -1,6 +1,7 @@
 package com.sound.meditionsoundapp.ui.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,12 +12,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.sound.meditionsoundapp.R;
+import com.sound.meditionsoundapp.ui.Activity.ExerciseTimerActivity;
 
 public class SettingFragment extends Fragment implements View.OnClickListener {
 
     private Context context;
     private View SettingView;
-    private TextView TvExerciseTime,TvShare,TvRate,TvPolicy;
+    private TextView TvExerciseTime, TvShare, TvRate, TvPolicy;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        SettingView=inflater.inflate(R.layout.fragment_setting, container, false);
+        SettingView = inflater.inflate(R.layout.fragment_setting, container, false);
         initViews();
         initListeners();
         initActions();
@@ -35,10 +37,10 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
 
     private void initViews() {
         context = getContext();
-        TvExerciseTime=(TextView)SettingView.findViewById(R.id.TvExerciseTime);
-        TvShare=(TextView)SettingView.findViewById(R.id.TvShare);
-        TvRate=(TextView)SettingView.findViewById(R.id.TvRate);
-        TvPolicy=(TextView)SettingView.findViewById(R.id.TvPolicy);
+        TvExerciseTime = (TextView) SettingView.findViewById(R.id.TvExerciseTime);
+        TvShare = (TextView) SettingView.findViewById(R.id.TvShare);
+        TvRate = (TextView) SettingView.findViewById(R.id.TvRate);
+        TvPolicy = (TextView) SettingView.findViewById(R.id.TvPolicy);
     }
 
     private void initListeners() {
@@ -54,7 +56,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.TvExerciseTime:
                 GotoExerciseTimer();
                 break;
@@ -71,6 +73,6 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     }
 
     private void GotoExerciseTimer() {
-
+        startActivity(new Intent(context, ExerciseTimerActivity.class));
     }
 }

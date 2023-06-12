@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_10sdp"
-            android:text="@string/exercise_time"
+            android:text="@string/meditation_time"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />
 

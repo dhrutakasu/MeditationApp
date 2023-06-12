@@ -93,8 +93,10 @@
     <string name="piano">Piano</string>
     <string name="flute">Flute</string>
     <string name="setting">Setting</string>
-    <string name="exercise_time">Exercise Timer</string>
+    <string name="meditation_time">Meditation Timer</string>
     <string name="share">Share</string>
     <string name="rate">Rate</string>
     <string name="policy">Private Policy</string>
+    <string name="str_reminder">Set Reminder</string>
+    <string name="notification_msg">Its Time to your Meditation Time..</string>
 </resources>
