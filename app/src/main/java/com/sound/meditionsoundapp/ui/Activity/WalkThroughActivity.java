@@ -19,9 +19,8 @@ public class WalkThroughActivity extends AppCompatActivity {
     private ViewPager PagerWalk;
     private TextView TvWalkContinue;
 
-    private Integer[] images = {R.drawable.ic_bg_1, R.drawable.ic_bg_2};
+    private Integer[] images = {R.drawable.ic_bg_1, R.drawable.ic_bg_2, R.drawable.ic_bg_3};
     private TabLayout TabWalk;
-    private RelativeLayout RlWelcomeBg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,6 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     private void initViews() {
         context = this;
-        RlWelcomeBg = (RelativeLayout) findViewById(R.id.RlWelcomeBg);
         PagerWalk = (ViewPager) findViewById(R.id.PagerWalk);
         TvWalkContinue = (TextView) findViewById(R.id.TvWalkContinue);
         TabWalk = (TabLayout) findViewById(R.id.TabWalk);
@@ -45,7 +43,9 @@ public class WalkThroughActivity extends AppCompatActivity {
         TvWalkContinue.setOnClickListener(view -> {
             if (PagerWalk.getCurrentItem() == 0) {
                 PagerWalk.setCurrentItem(1);
-            } else {
+            } else if (PagerWalk.getCurrentItem()==1) {
+                PagerWalk.setCurrentItem(2);
+            }else {
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
                 finish();
@@ -56,7 +56,6 @@ public class WalkThroughActivity extends AppCompatActivity {
     private void initActions() {
         WalkAdapter adapter = new WalkAdapter(this, images);
         PagerWalk.setAdapter(adapter);
-        RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
         TabWalk.setupWithViewPager(PagerWalk, true);
 
         PagerWalk.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -78,12 +77,10 @@ public class WalkThroughActivity extends AppCompatActivity {
     }
 
     private void changeText(int i) {
-        if (i == 0) {
-            RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
-            TvWalkContinue.setText("NEXT");
-        } else if (i == 1) {
-            RlWelcomeBg.setBackgroundResource(R.drawable.ic_welcome_2);
-            TvWalkContinue.setText("GOT IT");
+        if (i != 2) {
+            TvWalkContinue.setText("Next");
+        } else {
+            TvWalkContinue.setText("Let's Start");
         }
     }
 }

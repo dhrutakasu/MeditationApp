@@ -8,6 +8,7 @@
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_border_color.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_bottom.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_default_dot.xml" value="0.1015" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_gradient_button.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_selected_dot.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_tab_selector.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/ic_welcome_1.xml" value="0.1015" />
@@ -16,8 +17,8 @@
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/drawable/seekbar_thumb.xml" value="0.1015" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_sound_player.xml" value="0.33" />
-        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_splash.xml" value="0.2" />
-        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_walkthrough.xml" value="0.14" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_splash.xml" value="0.12" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/activity_walkthrough.xml" value="0.17" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/fragment_home.xml" value="0.16" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/MeditationApp/MeditationSound App/app/src/main/res/layout/fragment_information.xml" value="0.2" />

@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">MeditationSound App</string>
     <string name="binaural_beats">Binaural Beats</string>
-    <string name="welcome_first">An age-old practice proved today to be an actual science is as fascinating as magic when it comes to Meditation through Brain Waves.</string>
+    <string name="welcome_first">Balance is your meditation coach that promotes mindfulness</string>
     <string name="relaxing_sounds">Relaxing Sounds</string>
-    <string name="welcome_second">"You can relax and sleep with sleeping sounds, nature sounds, rain sounds, meditation sounds and much more. Enjoy the high quality sleep sounds and wake up refreshed. "</string>
+    <string name="welcome_second">Improves brain activity: memory, attention, concentration</string>
+    <string name="meditation_music">Meditation music</string>
+    <string name="welcome_third">There is a collection of specially selected piece of meditation music.</string>
     <string name="welcome_to">Hello, 👋</string>
     <string name="str_home">Home</string>
     <string name="str_dashboard">Dashboard</string>

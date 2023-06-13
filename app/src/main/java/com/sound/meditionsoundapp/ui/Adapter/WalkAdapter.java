@@ -37,6 +37,9 @@ public class WalkAdapter extends PagerAdapter {
         } else if (position == 1) {
             TvWalkTitle.setText(activity.getResources().getString(R.string.relaxing_sounds));
             TvWalkSubTitle.setText(activity.getResources().getString(R.string.welcome_second));
+        } else if (position == 2) {
+            TvWalkTitle.setText(activity.getResources().getString(R.string.meditation_music));
+            TvWalkSubTitle.setText(activity.getResources().getString(R.string.welcome_third));
         }
 
         IvSlider.setImageResource(imagesArray[position]);

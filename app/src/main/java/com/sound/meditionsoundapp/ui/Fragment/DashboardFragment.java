@@ -53,7 +53,7 @@ public class DashboardFragment extends Fragment {
 
     private void initActions() {
         itemModelArrayList = new ArrayList<>();
-        ItemModel itemModel = new ItemModel(getString(R.string.ocean), R.drawable.re_img13);
+        ItemModel itemModel = new ItemModel(getString(R.string.ocean), R.drawable.ic_ocean);
         itemModelArrayList.add(itemModel);
         itemModel = new ItemModel(getString(R.string.forest), R.drawable.re_img8);
         itemModelArrayList.add(itemModel);

@@ -53,31 +53,31 @@ public class HomeFragment extends Fragment {
 
     private void initActions() {
         itemModelArrayList = new ArrayList<>();
-        ItemModel itemModel = new ItemModel(getString(R.string.study), R.drawable.img12);
+        ItemModel itemModel = new ItemModel(getString(R.string.study), R.drawable.ic_study);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.focus), R.drawable.img3);
+        itemModel = new ItemModel(getString(R.string.focus), R.drawable.ic_focus);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.chanting), R.drawable.img2);
+        itemModel = new ItemModel(getString(R.string.chanting), R.drawable.ic_chanting);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.memory), R.drawable.img9);
+        itemModel = new ItemModel(getString(R.string.memory), R.drawable.ic_memory);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.relaxation), R.drawable.img10);
+        itemModel = new ItemModel(getString(R.string.relaxation), R.drawable.ic_relaxation);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.sleep), R.drawable.img11);
+        itemModel = new ItemModel(getString(R.string.sleep), R.drawable.ic_sleep);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.intelligence), R.drawable.img7);
+        itemModel = new ItemModel(getString(R.string.intelligence), R.drawable.ic_intelligent);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.euphoria), R.drawable.img4);
+        itemModel = new ItemModel(getString(R.string.euphoria), R.drawable.ic_euphoria);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.healing), R.drawable.img6);
+        itemModel = new ItemModel(getString(R.string.healing), R.drawable.ic_helling);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.astral_travel), R.drawable.img1);
+        itemModel = new ItemModel(getString(R.string.astral_travel), R.drawable.ic_astral_travel);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.intuition), R.drawable.intuition);
+        itemModel = new ItemModel(getString(R.string.intuition), R.drawable.ic_intuition);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.creativity), R.drawable.creativity);
+        itemModel = new ItemModel(getString(R.string.creativity), R.drawable.ic_creativity);
         itemModelArrayList.add(itemModel);
-        itemModel = new ItemModel(getString(R.string.third_eye), R.drawable.img13);
+        itemModel = new ItemModel(getString(R.string.third_eye), R.drawable.ic_third_eye);
         itemModelArrayList.add(itemModel);
 
         RvHome.setLayoutManager(new GridLayoutManager(context, 2));

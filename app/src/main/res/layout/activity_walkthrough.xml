@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/RlWelcomeBg"
         android:layout_width="match_parent"
-        android:background="@drawable/ic_welcome_1"
+        android:background="@color/black"
         android:layout_height="match_parent">
 
         <androidx.viewpager.widget.ViewPager
@@ -31,7 +31,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/TvWalkContinue"
                 android:layout_alignParentStart="true"
                 android:background="@android:color/transparent"
                 app:tabBackground="@drawable/ic_tab_selector"
@@ -40,16 +40,17 @@
 
             <TextView
                 android:id="@+id/TvWalkContinue"
-                android:layout_width="@dimen/_80sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/ic_bg"
+                android:background="@drawable/ic_next_button"
                 android:fontFamily="@font/main_semibold"
                 android:gravity="center"
                 android:text="NEXT"

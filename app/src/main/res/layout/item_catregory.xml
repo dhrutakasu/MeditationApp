@@ -14,6 +14,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_gravity="top"
         android:scaleType="fitXY"
-        android:src="@drawable/img1"
+        android:src="@drawable/ic_astral_travel"
         android:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
