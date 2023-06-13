@@ -3,19 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBg"
     tools:context=".ui.Fragment.DashboardFragment">
+
+    <View
+        android:id="@+id/ViewSlidePenalSec"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/TvWelcomeTo"
+        android:layout_alignBottom="@id/TvRelaxingSounds"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@color/purple_500"/>
 
     <TextView
         android:id="@+id/TvWelcomeTo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_8sdp"
+        android:fontFamily="@font/main_semibold"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginRight="@dimen/_8sdp"
+        android:layout_toEndOf="@id/ViewSlidePenalSec"
         android:text="@string/welcome_to"
         android:textColor="#fff"
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_20sdp"
         android:textStyle="bold" />
 
     <TextView
@@ -25,10 +35,12 @@
         android:layout_below="@id/TvWelcomeTo"
         android:layout_marginLeft="@dimen/_8sdp"
         android:layout_marginTop="1dp"
+        android:layout_toEndOf="@id/ViewSlidePenalSec"
         android:layout_marginRight="@dimen/_8sdp"
         android:text="@string/relaxing_sounds"
-        android:textColor="#3665fe"
-        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/main_semibold"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -36,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/TvRelaxingSounds"
-        android:layout_marginBottom="?attr/actionBarSize"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

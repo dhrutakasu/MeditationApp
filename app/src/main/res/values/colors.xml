@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#298ADA</color>
-    <color name="purple_500">#0d66ae</color>
-    <color name="purple_700">#0C5A98</color>
+    <color name="purple_200">#80F841A4</color>
+    <color name="purple_500">#FF008A</color>
+    <color name="purple_700">#E8007D</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="lightBlue">#435063</color>

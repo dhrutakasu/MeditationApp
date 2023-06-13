@@ -978,7 +978,7 @@ public class SoundPlayerActivity extends AppCompatActivity implements View.OnCli
         } else {
             PlayerSound.stop();
             PlayerSound = MediaPlayer.create(context, ItemId);
-            IvPlaySound.setImageResource(R.drawable.play);
+            IvPlaySound.setImageResource(R.drawable.ic_play);
         }
     }
 

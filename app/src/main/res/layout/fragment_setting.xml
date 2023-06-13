@@ -27,7 +27,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginRight="@dimen/_8sdp"
         android:text="@string/setting"
-        android:textColor="#3665fe"
+        android:textColor="@color/purple_500"
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold" />
 

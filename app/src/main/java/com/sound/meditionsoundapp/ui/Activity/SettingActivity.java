@@ -1,50 +1,43 @@
-package com.sound.meditionsoundapp.ui.Fragment;
+package com.sound.meditionsoundapp.ui.Activity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sound.meditionsoundapp.BuildConfig;
 import com.sound.meditionsoundapp.R;
-import com.sound.meditionsoundapp.ui.Activity.ExerciseTimerActivity;
 
-public class SettingFragment extends Fragment implements View.OnClickListener {
+public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Context context;
-    private View SettingView;
-    private TextView TvExerciseTime, TvShare, TvRate, TvPolicy;
+    private ImageView IvBack;
+    private TextView TvTitle,TvExerciseTime, TvShare, TvRate, TvPolicy;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        SettingView = inflater.inflate(R.layout.fragment_setting, container, false);
+        setContentView(R.layout.activity_setting);
         initViews();
         initListeners();
         initActions();
-        return SettingView;
     }
-
     private void initViews() {
-        context = getContext();
-        TvExerciseTime = (TextView) SettingView.findViewById(R.id.TvExerciseTime);
-        TvShare = (TextView) SettingView.findViewById(R.id.TvShare);
-        TvRate = (TextView) SettingView.findViewById(R.id.TvRate);
-        TvPolicy = (TextView) SettingView.findViewById(R.id.TvPolicy);
+        context = this;
+        IvBack = (ImageView) findViewById(R.id.IvBack);
+        TvTitle = (TextView) findViewById(R.id.TvTitle);
+        TvExerciseTime = (TextView) findViewById(R.id.TvExerciseTime);
+        TvShare = (TextView) findViewById(R.id.TvShare);
+        TvRate = (TextView) findViewById(R.id.TvRate);
+        TvPolicy = (TextView) findViewById(R.id.TvPolicy);
     }
 
     private void initListeners() {
+        IvBack.setOnClickListener(this);
         TvExerciseTime.setOnClickListener(this);
         TvShare.setOnClickListener(this);
         TvRate.setOnClickListener(this);
@@ -52,12 +45,15 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initActions() {
-
+        TvTitle.setText(getString(R.string.setting));
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.IvBack:
+                onBackPressed();
+                break;
             case R.id.TvExerciseTime:
                 GotoExerciseTimer();
                 break;

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context=".ui.Activity.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/RlActionbarSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/layout_header" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RlActionbarSetting"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/ic_background_color"
+        android:padding="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/TvExerciseTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_right"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/main_semibold"
+            android:text="@string/meditation_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/TvShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvExerciseTime"
+            android:drawableEnd="@drawable/ic_right"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/main_semibold"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/TvRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvShare"
+            android:gravity="center_vertical"
+            android:drawableEnd="@drawable/ic_right"
+            android:fontFamily="@font/main_semibold"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/rate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/TvPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_below="@id/TvRate"
+            android:drawableEnd="@drawable/ic_right"
+            android:fontFamily="@font/main_semibold"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/policy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </RelativeLayout>
+</RelativeLayout>
