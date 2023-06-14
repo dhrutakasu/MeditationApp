@@ -25,6 +25,8 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+import com.sound.meditionsoundapp.Ads.Ad_Interstitial;
+import com.sound.meditionsoundapp.Ads.Ad_Native;
 import com.sound.meditionsoundapp.R;
 import com.sound.meditionsoundapp.receiver.AlertReceiver;
 import com.sound.meditionsoundapp.utils.Constants;
@@ -64,13 +66,14 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
     }
 
     private void initActions() {
+        Ad_Native.getInstance().showNative250(this, findViewById(R.id.FlNative));
         TvTitle.setText(getString(R.string.meditation_time));
 
         System.out.println("---- : HR " + new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr));
-        System.out.println("---- : MIN " + new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin));
+        System.out.println("---- : MIN " + new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            PickerSetReminders.setHour(new Pref(context).getInt( Constants.NOTIFICATION_HOUR, IntHr));
-            PickerSetReminders.setMinute(new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin));
+            PickerSetReminders.setHour(new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr));
+            PickerSetReminders.setMinute(new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
         }
     }
 
@@ -100,13 +103,13 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
                                 IntHr = PickerSetReminders.getCurrentHour().intValue();
                                 IntMin = PickerSetReminders.getCurrentMinute().intValue();
                             }
-                            new Pref(context).putBoolean( Constants.ExerciseSetTime, true);
-                            new Pref(context).putInt( Constants.NOTIFICATION_HOUR, IntHr);
-                            new Pref(context).putInt( Constants.NOTIFICATION_MINUTES, IntMin);
+                            new Pref(context).putBoolean(Constants.ExerciseSetTime, true);
+                            new Pref(context).putInt(Constants.NOTIFICATION_HOUR, IntHr);
+                            new Pref(context).putInt(Constants.NOTIFICATION_MINUTES, IntMin);
                             Log.d("ReminderCheck", "Reminder set in ExerciseFragment page");
-                            Log.d("ReminderCheck", "Reminder set in " + new Pref(context).getInt( Constants.NOTIFICATION_HOUR, IntHr) + ":" + new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin) + ":0");
+                            Log.d("ReminderCheck", "Reminder set in " + new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr) + ":" + new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin) + ":0");
 
-                            GotoSetAlarm(new Pref(context).getInt( Constants.NOTIFICATION_HOUR, IntHr), new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin));
+                            GotoSetAlarm(new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr), new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
                             onBackPressed();
                         }
 
@@ -120,7 +123,7 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
                             permissionToken.continuePermissionRequest();
                         }
                     }).withErrorListener(error -> {
-                    }).onSameThread().check();
+            }).onSameThread().check();
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 IntHr = PickerSetReminders.getHour();
@@ -129,13 +132,13 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
                 IntHr = PickerSetReminders.getCurrentHour().intValue();
                 IntMin = PickerSetReminders.getCurrentMinute().intValue();
             }
-            new Pref(context).putBoolean( Constants.ExerciseSetTime, true);
-            new Pref(context).putInt( Constants.NOTIFICATION_HOUR, IntHr);
-            new Pref(context).putInt( Constants.NOTIFICATION_MINUTES, IntMin);
+            new Pref(context).putBoolean(Constants.ExerciseSetTime, true);
+            new Pref(context).putInt(Constants.NOTIFICATION_HOUR, IntHr);
+            new Pref(context).putInt(Constants.NOTIFICATION_MINUTES, IntMin);
             Log.d("ReminderCheck", "Reminder set in ExerciseFragment page");
-            Log.d("ReminderCheck", "Reminder set in " + new Pref(context).getInt( Constants.NOTIFICATION_HOUR, IntHr) + ":" + new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin) + ":0");
+            Log.d("ReminderCheck", "Reminder set in " + new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr) + ":" + new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin) + ":0");
 
-            GotoSetAlarm(new Pref(context).getInt( Constants.NOTIFICATION_HOUR, IntHr), new Pref(context).getInt( Constants.NOTIFICATION_MINUTES, IntMin));
+            GotoSetAlarm(new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr), new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
             onBackPressed();
         }
     }
@@ -176,5 +179,15 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
             dialog.cancel();
         });
         builder.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Ad_Interstitial.getInstance().showInter(ExerciseTimerActivity.this, new Ad_Interstitial.MyCallback() {
+            @Override
+            public void callbackCall() {
+                finish();
+            }
+        });
     }
 }

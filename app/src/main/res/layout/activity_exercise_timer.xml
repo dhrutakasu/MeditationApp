@@ -7,6 +7,16 @@
     android:background="@drawable/ic_background"
     tools:context=".ui.Activity.ExerciseTimerActivity">
 
+    <FrameLayout
+        android:id="@+id/FlNative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <RelativeLayout
         android:id="@+id/RlActionBarExerciseReminders"
         android:layout_width="match_parent"
@@ -18,71 +28,77 @@
         <include layout="@layout/layout_header" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/FlNative"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RlActionBarExerciseReminders">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/CardWatch"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/_12sdp"
-            app:cardCornerRadius="@dimen/_12sdp">
+            android:orientation="vertical">
 
-            <TimePicker
-                android:id="@+id/PickerSetReminders"
+            <LinearLayout
+                android:id="@+id/LlSetTIme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/main_semibold"
-                android:headerBackground="@color/purple_700"
-                android:numbersBackgroundColor="#E5E5E5"
-                android:numbersSelectorColor="@color/purple_700" />
-        </androidx.cardview.widget.CardView>
+                android:layout_below="@+id/CardWatch"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:gravity="center">
 
-        <LinearLayout
-            android:id="@+id/LlSetTIme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/CardWatch"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:gravity="center">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/purple_500"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:id="@+id/LlSetReminders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/TvExerciseSetReminders"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:fontFamily="@font/main_semibold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_18sdp"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:paddingEnd="@dimen/_18sdp"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:text="@string/str_reminder"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:id="@+id/CardWatch"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/purple_500"
-                app:cardCornerRadius="@dimen/_3sdp"
-                app:cardElevation="@dimen/_3sdp">
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_12sdp"
+                app:cardCornerRadius="@dimen/_12sdp">
 
-                <LinearLayout
-                    android:id="@+id/LlSetReminders"
+                <TimePicker
+                    android:id="@+id/PickerSetReminders"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/TvExerciseSetReminders"
-                        android:layout_width="@dimen/_150sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:fontFamily="@font/main_semibold"
-                        android:paddingStart="@dimen/_18sdp"
-                        android:paddingTop="@dimen/_6sdp"
-                        android:gravity="center"
-                        android:paddingEnd="@dimen/_18sdp"
-                        android:paddingBottom="@dimen/_6sdp"
-                        android:text="@string/str_reminder"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_10sdp" />
-                </LinearLayout>
+                    android:fontFamily="@font/main_semibold"
+                    android:headerBackground="@color/purple_700"
+                    android:numbersBackgroundColor="#E5E5E5"
+                    android:numbersSelectorColor="@color/purple_700" />
             </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

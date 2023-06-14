@@ -13,8 +13,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
+import com.google.android.gms.ads.AdSize;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.sound.meditionsoundapp.Ads.Ad_Banner;
 import com.sound.meditionsoundapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -24,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView IvSetting;
     private ImageView IvHome, IvSound, IvInfo;
     private AppBarConfiguration AcMain;
-//    private BottomNavigationView NavBottomView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initViews() {
         context = this;
-//        NavBottomView = (BottomNavigationView) findViewById(R.id.NavBottomView);
         IvSetting = (ImageView) findViewById(R.id.IvSetting);
         IvHome = findViewById(R.id.IvHome);
         IvSound = findViewById(R.id.IvSound);
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListeners() {
-//        NavBottomView.setOnNavigationItemSelectedListener(this);
         IvSetting.setOnClickListener(this);
         IvHome.setOnClickListener(this);
         IvSound.setOnClickListener(this);
@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initActions() {
+        Ad_Banner.getInstance().showBanner(this, AdSize.LARGE_BANNER, (RelativeLayout) findViewById(R.id.RlAdView), (RelativeLayout) findViewById(R.id.RlAdViewMain));
+
         NcMain.navigate(R.id.NavHome);
     }
 
@@ -64,28 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         NavController navController = Navigation.findNavController(this, R.id.NcMain);
         return NavigationUI.navigateUp(navController, AcMain) || super.onSupportNavigateUp();
     }
-//
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.NavHome:
-//                NcMain.navigate(R.id.NavHome);
-//                return true;
-//            case R.id.NavDashboard:
-//                NcMain.popBackStack(R.id.NavHome, false);
-//                NcMain.navigate(R.id.NavDashboard);
-//                return true;
-//            case R.id.NavInformation:
-//                NcMain.popBackStack(R.id.NavHome, false);
-//                NcMain.navigate(R.id.NavInformation);
-//                return true;
-////            case R.id.NavNotification:
-////                NcMain.popBackStack(R.id.NavHome, false);
-////                NcMain.navigate(R.id.NavNotification);
-////                return true;
-//        }
-//        return false;
-//    }
 
     @Override
     public void onClick(View v) {
@@ -113,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 NcMain.popBackStack(R.id.NavHome, false);
                 NcMain.navigate(R.id.NavInformation);
                 break;
-
         }
     }
 }

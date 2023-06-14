@@ -5,11 +5,15 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdSize;
 import com.google.android.material.tabs.TabLayout;
+import com.sound.meditionsoundapp.Ads.Ad_Banner;
 import com.sound.meditionsoundapp.R;
 import com.sound.meditionsoundapp.ui.Adapter.WalkAdapter;
 
@@ -25,6 +29,10 @@ public class WalkThroughActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        }
         setContentView(R.layout.activity_walkthrough);
 
         initViews();
@@ -54,6 +62,8 @@ public class WalkThroughActivity extends AppCompatActivity {
     }
 
     private void initActions() {
+        Ad_Banner.getInstance().showBanner(this, AdSize.LARGE_BANNER, (RelativeLayout) findViewById(R.id.RlAdView), (RelativeLayout) findViewById(R.id.RlAdViewMain));
+
         WalkAdapter adapter = new WalkAdapter(this, images);
         PagerWalk.setAdapter(adapter);
         TabWalk.setupWithViewPager(PagerWalk, true);

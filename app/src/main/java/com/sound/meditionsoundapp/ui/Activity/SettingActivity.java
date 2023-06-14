@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sound.meditionsoundapp.Ads.Ad_Interstitial;
+import com.sound.meditionsoundapp.Ads.Ad_Native;
 import com.sound.meditionsoundapp.BuildConfig;
 import com.sound.meditionsoundapp.R;
 
@@ -45,6 +47,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initActions() {
+        Ad_Native.getInstance().showNative250(this, findViewById(R.id.FlNative));
         TvTitle.setText(getString(R.string.setting));
     }
 
@@ -87,5 +90,14 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     private void GotoRate() {
     }
     private void GotoPrivacy() {
+    }
+    @Override
+    public void onBackPressed() {
+        Ad_Interstitial.getInstance().showInter(SettingActivity.this, new Ad_Interstitial.MyCallback() {
+            @Override
+            public void callbackCall() {
+                finish();
+            }
+        });
     }
 }

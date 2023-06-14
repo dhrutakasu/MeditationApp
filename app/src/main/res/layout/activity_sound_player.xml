@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/RlAdViewMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,5 +66,36 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_sound" />
 
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/ProgressSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/purple_500"/>
+
+
+    <RelativeLayout
+        android:id="@+id/RlAdViewMain"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="bottom|center">
+
+        <RelativeLayout
+            android:id="@+id/RlAdView"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center|bottom" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
