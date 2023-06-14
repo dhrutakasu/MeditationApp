@@ -58,14 +58,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
-                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/purple_500"
+                app:cardCornerRadius="@dimen/_3sdp"
                 app:cardElevation="@dimen/_3sdp">
 
                 <LinearLayout
                     android:id="@+id/LlSetReminders"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_500"
                     android:gravity="center">
 
                     <TextView
@@ -76,7 +76,6 @@
                         android:paddingStart="@dimen/_18sdp"
                         android:paddingTop="@dimen/_6sdp"
                         android:gravity="center"
-                        android:background="@drawable/ic_background_color"
                         android:paddingEnd="@dimen/_18sdp"
                         android:paddingBottom="@dimen/_6sdp"
                         android:text="@string/str_reminder"
