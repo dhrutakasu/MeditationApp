@@ -7,26 +7,20 @@
 
     <fragment
         android:id="@+id/NavHome"
-        android:name="com.sound.meditionsoundapp.ui.Fragment.HomeFragment"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.MainFragment"
         android:label="@string/str_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_main" />
 
     <fragment
         android:id="@+id/NavDashboard"
-        android:name="com.sound.meditionsoundapp.ui.Fragment.DashboardFragment"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.RelaxFragment"
         android:label="@string/str_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_relax" />
 
     <fragment
         android:id="@+id/NavInformation"
-        android:name="com.sound.meditionsoundapp.ui.Fragment.InformationFragment"
+        android:name="com.sound.meditionsoundapp.ui.Fragment.InfoFragment"
         android:label="@string/str_infomation"
-        tools:layout="@layout/fragment_information" />
-
-<!--    <fragment-->
-<!--        android:id="@+id/NavNotification"-->
-<!--        android:name="com.sound.meditionsoundapp.ui.Fragment.SettingFragment"-->
-<!--        android:label="@string/str_notifications"-->
-<!--        tools:layout="@layout/fragment_setting" />-->
+        tools:layout="@layout/fragment_info" />
 
 </navigation>

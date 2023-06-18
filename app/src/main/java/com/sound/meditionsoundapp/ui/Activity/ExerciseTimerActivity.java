@@ -69,8 +69,6 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
         Ad_Native.getInstance().showNative250(this, findViewById(R.id.FlNative));
         TvTitle.setText(getString(R.string.meditation_time));
 
-        System.out.println("---- : HR " + new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr));
-        System.out.println("---- : MIN " + new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             PickerSetReminders.setHour(new Pref(context).getInt(Constants.NOTIFICATION_HOUR, IntHr));
             PickerSetReminders.setMinute(new Pref(context).getInt(Constants.NOTIFICATION_MINUTES, IntMin));
@@ -152,16 +150,12 @@ public class ExerciseTimerActivity extends AppCompatActivity implements View.OnC
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this,1,intent,PendingIntent.FLAG_IMMUTABLE);
 
         if (c.before(Calendar.getInstance())) {
             c.add(Calendar.DATE, 1);
         }
 
-//        alarmManager.setAlarmClock(new AlarmManager.AlarmClockInfo( c.getTimeInMillis(), pendingIntent), pendingIntent);
-//        alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
         alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis() - (60 * 1000), AlarmManager.INTERVAL_DAY, pendingIntent);
-//        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(),AlarmManager.INTERVAL_DAY, pendingIntent);
     }
 
     private void showSettingsDialog() {

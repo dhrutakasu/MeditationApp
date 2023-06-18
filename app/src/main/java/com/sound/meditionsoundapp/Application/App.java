@@ -26,7 +26,6 @@ import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ProcessLifecycleOwner;
 
-//https://stackoverflow.com/questions/43319749/layoutmanager-for-recyclerview-grid-with-different-cell-width-in-android
 public class App extends Application implements DefaultLifecycleObserver, Application.ActivityLifecycleCallbacks {
 
     private AppOpenAdManager appOpenAdManager;

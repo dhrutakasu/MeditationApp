@@ -13,8 +13,6 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.sound.meditionsoundapp.Ads.Ad_Interstitial;
 import com.sound.meditionsoundapp.Ads.Ad_Native;
@@ -27,6 +25,15 @@ import com.sound.meditionsoundapp.utils.Pref;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         }
         setContentView(R.layout.activity_splash);
-        context=this;
+        context = this;
         createHandler(3);
     }
 
@@ -84,8 +91,7 @@ public class SplashActivity extends AppCompatActivity {
                             } catch (PackageManager.NameNotFoundException e) {
                             } catch (NullPointerException e) {
                             }
-                            CountDownTimer countDownTimer =
-                                    new CountDownTimer(seconds * 1000, 1000) {
+                            CountDownTimer countDownTimer = new CountDownTimer(seconds * 1000, 1000) {
                                         @Override
                                         public void onTick(long millisUntilFinished) {
                                             secondsRemaining = ((millisUntilFinished / 1000) + 1);
@@ -96,12 +102,11 @@ public class SplashActivity extends AppCompatActivity {
                                             secondsRemaining = 0;
                                             Application application = getApplication();
 
-                                            if (!(application instanceof App)) {
-                                                Log.e(LOG_TAG, "Failed to cast application to MyApplication.");
-                                                startMainActivity();
-                                                return;
-                                            }
-
+//                                            if (!(application instanceof App)) {
+//                                                Log.e(LOG_TAG, "Failed to cast application to MyApplication.");
+//                                                startMainActivity();
+//                                                return;
+//                                            }
 //                                            Ad_Interstitial.getInstance().showInter(SplashActivity.this, new Ad_Interstitial.MyCallback() {
 //                                        @Override
 //                                        public void callbackCall() {
@@ -122,22 +127,55 @@ public class SplashActivity extends AppCompatActivity {
                                         }
                                     };
                             countDownTimer.start();
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
                     },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
+                    error -> {
 
-                        }
                     }) {
             };
             SingleJsonPass.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
         } else {
             Toast.makeText(context, "Please turn on your internet connection...", Toast.LENGTH_LONG).show();
         }
+    }
+
+    private boolean unpackZip(String path, String zipname) {
+        InputStream is;
+        ZipInputStream zis;
+        try {
+            String filename;
+            is = new FileInputStream(path + zipname);
+            zis = new ZipInputStream(new BufferedInputStream(is));
+            ZipEntry ze;
+            byte[] buffer = new byte[1024];
+            int count;
+
+            while ((ze = zis.getNextEntry()) != null) {
+                filename = ze.getName();
+                if (ze.isDirectory()) {
+                    File fmd = new File(path + filename);
+                    fmd.mkdirs();
+                    continue;
+                }
+
+                FileOutputStream fout = new FileOutputStream(path + filename);
+                while ((count = zis.read(buffer)) != -1) {
+                    fout.write(buffer, 0, count);
+                }
+
+                fout.close();
+                zis.closeEntry();
+            }
+            zis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
     public void startMainActivity() {

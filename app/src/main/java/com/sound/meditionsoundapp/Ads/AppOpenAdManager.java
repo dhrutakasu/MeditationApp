@@ -49,7 +49,6 @@ public class AppOpenAdManager implements Application.ActivityLifecycleCallbacks,
         String string = new Pref(context).getString(Pref.AD_OPEN, "");
         this.AD_UNIT_ID = string;
         Pref.openads = string;
-//        ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         loadAd(context);
     }
 
@@ -57,7 +56,6 @@ public class AppOpenAdManager implements Application.ActivityLifecycleCallbacks,
         this.AD_UNIT_ID = new Pref(context).getString(Pref.AD_OPEN, "");
         this.myApplication = myApplicationAppOpen;
         myApplicationAppOpen.registerActivityLifecycleCallbacks(this);
-//        ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         loadAd(context);
     }
 
